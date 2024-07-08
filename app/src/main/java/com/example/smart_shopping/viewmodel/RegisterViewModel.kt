@@ -5,13 +5,12 @@ import com.example.smart_shopping.data.User
 import com.example.smart_shopping.util.Resource
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import javax.inject.Inject
 
 //@HiltViewModel
-class LoginRegisterViewModel @Inject constructor(
+class RegisterViewModel @Inject constructor(
     private val firebaseAuth: FirebaseAuth
 ):ViewModel() {
 
