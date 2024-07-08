@@ -1,6 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/blury_background" />
+
+    <TextView
+        style="@style/h3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:drawableStart="@drawable/ic_kleine_shape"
+        android:drawablePadding="6dp"
+        android:text="Smart-Shopping"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="@+id/guidelineLogingLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/LetsLogin"
+        style="@style/h4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/rightAddressShopping"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline3LogoUnder"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLogingLeft" />
+
+    <TextView
+        android:id="@+id/DontHaveAccount"
+        style="@style/h2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-80dp"
+        android:gravity="center"
+        android:text="@string/QualityLogin"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/LetsLogin"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLogingLeft" />
+
+    <EditText
+        android:id="@+id/email"
+        style="@style/editText"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edittextHeight"
+        android:hint="Email"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4UnderDontHaveAcc"
+        app:layout_constraintEnd_toEndOf="@+id/guideline2LogingRight"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLogingLeft" />
+
+    <EditText
+        android:id="@+id/password"
+        style="@style/editText"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edittextHeight"
+        android:hint="Password"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5UnderEmail"
+        app:layout_constraintEnd_toEndOf="@+id/guideline2LogingRight"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLogingLeft" />
+
+    <TextView
+        android:id="@+id/ForgetPassword"
+        style="@style/h2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-60dp"
+        android:gravity="center"
+        android:text="@string/ForgetPassword"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/password"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLogingLeft" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogin"
+        style="@style/blueButtonStyle"
+        android:layout_width="@dimen/mediumLoginButtonWidth"
+        android:layout_height="@dimen/mediumButtonHeight"
+        android:gravity="center"
+        android:text="Login"
+
+        app:layout_constraintBaseline_toTopOf="@+id/guideline6UnderForgot"
+        app:layout_constraintEnd_toEndOf="@id/guideline2LogingRight"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLogingLeft" />
+
+    <ImageView
+        android:id="@+id/facebookLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/facebook_login"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7UnderLoging"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLogingLeft" />
+
+    <TextView
+        android:id="@+id/ButtoninFacebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Facebook"
+        app:layout_constraintBottom_toBottomOf="20dp"
+        app:layout_constraintStart_toStartOf="@+id/facebookLogin"
+        app:layout_constraintBottom_toTopOf="@id/facebookLogin"
+        android:layout_marginBottom="-29dp"
+        app:layout_constraintEnd_toEndOf="@id/facebookLogin"/>
+
+    <ImageView
+        android:id="@+id/GoogleLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/google_login"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7UnderLoging"
+        app:layout_constraintStart_toEndOf= "@+id/facebookLogin"
+        app:layout_constraintEnd_toEndOf="@+id/guideline2LogingRight"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Google"
+        app:layout_constraintBottom_toBottomOf="@id/GoogleLogin"
+        app:layout_constraintStart_toStartOf="@+id/GoogleLogin"
+        app:layout_constraintBottom_toTopOf="@id/GoogleLogin"
+        android:layout_marginBottom="-29dp"
+        app:layout_constraintEnd_toEndOf="@id/GoogleLogin"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLogingLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2LogingRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3LogoUnder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4UnderDontHaveAcc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.47" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5UnderEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6UnderForgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.67" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7UnderLoging"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.78" />
 </androidx.constraintlayout.widget.ConstraintLayout>

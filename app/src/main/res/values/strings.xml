@@ -2,4 +2,7 @@
     <string name="app_name">Smart-Shopping</string>
     <string name="rightAddress">The Right Address \n  For Shopping\n    Anyday\n</string>
     <string name="Quality">It is now very easy to reach the\nbest quality among all the\nproducts on the Internet</string>
+    <string name="rightAddressShopping">Let\'s Login</string>
+    <string name="QualityLogin">Don\'t have an account? Register\n</string>
+    <string name="ForgetPassword">Forgot Password\n</string>
 </resources>

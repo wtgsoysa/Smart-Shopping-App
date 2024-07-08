@@ -4,4 +4,9 @@
     <dimen name="smallButtonWidth">130dp</dimen>
     <dimen name="smallButtonHeight">55dp</dimen>
     <dimen name="buttonCorners">10dp</dimen>
+    <dimen name="mediumButtonWidth">200dp</dimen>
+    <dimen name="mediumButtonHeight">55dp</dimen>
+    <dimen name="edittextHeight">50dp</dimen>
+    <dimen name="edittextWidth">325dp</dimen>
+    <dimen name="mediumLoginButtonWidth">330dp</dimen>
 </resources>

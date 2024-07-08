@@ -1,10 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.smart_shopping.activities.LoginRegisterActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/blury_background"
+        android:scaleType="centerCrop"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            style="@style/h3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:drawableStart="@drawable/ic_kleine_shape"
+            android:drawablePadding="6dp"
+            android:text="Smart-Shopping"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvRightAddressForShopping"
+            style="@style/h4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/rightAddress"
+            android:textAlignment="center"
+
+            android:textSize="32sp"
+            app:layout_constraintBaseline_toBottomOf="parent"
+            app:layout_constraintBaseline_toTopOf="@+id/guidelineUnderLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvQuality"
+            style="@style/h2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/Quality"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/guidelineUnderMainHeading"
+            app:layout_constraintEnd_toEndOf="@id/tvRightAddressForShopping"
+            app:layout_constraintStart_toStartOf="@id/tvRightAddressForShopping" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRegisterAccOption"
+            style="@style/blueButtonStyle"
+            android:layout_width="@dimen/mediumButtonWidth"
+            android:layout_height="@dimen/mediumButtonHeight"
+            android:text="Register"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/tvQuality"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="180dp"
+            app:layout_constraintEnd_toEndOf="@id/tvQuality"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLoginAccOption"
+            style="@style/whiteButtonStyle"
+            android:layout_width="@dimen/mediumButtonWidth"
+            android:layout_height="@dimen/mediumButtonHeight"
+            android:text="Login"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/tvQuality"
+            app:layout_constraintBottom_toBottomOf="@+id/btnRegisterAccOption"
+            android:layout_marginBottom="-70dp"
+            app:layout_constraintEnd_toEndOf="@id/tvQuality"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineUnderLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.30" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineUnderMainHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.55" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
